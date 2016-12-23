@@ -1,6 +1,6 @@
 # Network-Performance-Tools
 
-A collection of useful network performance tools that I have created.
+A (soon to be expanding) collection of useful network performance tools, written in Java.
 
 ## Tools
 
