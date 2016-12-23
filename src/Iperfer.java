@@ -2,6 +2,34 @@ import java.io.*;
 import java.math.BigInteger;
 import java.net.*;
 
+/* *
+ * A tool for measuring network bandwidth.  In client mode, Iperfer will print a one
+ * line summary, including the total number of bytes sent (in kilobytes) and the rate
+ * at which traffic could be sent (Mbps).  In server mode, Iperfer will print a one
+ * line summary, including the total number of bytes received (in kilobytes) and the
+ * rate at which traffic could be read (Mbps).
+ *
+ * Usage:
+ * 
+ *   - Client Mode:
+ *     
+ *     $ java Iperfer -c -h [server hostname] -p [server port] -t [time]
+ *
+ *     -c               Indicates this is the iperf client that generates the data.
+ *     server hostname  The hostname or IP address of the iperf server which will
+ *                      consume data.
+ *     server port      The port on which the remote host is waiting to consume data;
+ *                      the port should be in the range 1024 < server port < 65536.
+ *     time             The duration in seconds for which data should be generated.
+ *
+ *   - Server Mode:
+ *
+ *     $ java Iperfer -s -p [listen port]
+ *
+ *     -s           Indicates this is the iperf server which should consume data.
+ *     listen port  The port on which the host is waiting to consume data; the port
+ *                  should be in the range 1024 < listen port < 65536.
+ * */
 
 public class Iperfer {
 

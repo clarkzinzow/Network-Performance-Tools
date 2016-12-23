@@ -30,7 +30,7 @@ $ java Iperfer -c -h [server hostname] -p [server port] -t [time]
 * `-c` indicates this is the iperf client that generates the data.
 * `server hostname` is the hostname or IP address of the iperf server which will consume data.
 * `server port` is the port on which the remote host is waiting to consume data; the port should
-  be in the range 1024 < `server port` < 65535.
+  be in the range 1024 < `server port` < 65536.
 * `time` is the duration in seconds for which data should be generated.
 
 The presence of the `-c` option will be taken as an indicator that **Iperfer** is being run in
@@ -50,11 +50,11 @@ $ java Iperfer -s -p [listen port]
 
 * `-s` indicates this is the iperf server which should consume data.
 * `listen port` is the port on which the host is waiting to consume data; the port should be in the
-  range 1024 > `listen port` < 65536.
+  range 1024 < `listen port` < 65536.
 
 The presence of the `-s` option will be taken as an indicator that **Iperfer** is being run in
 server mode.
 
 After the client has closed the connection, **Iperfer** will print a one line summary that includes:
-* The toatl number of bytes received (in kilobytes.)
+* The total number of bytes received (in kilobytes.)
 * The rate at which traffic could be read (Mbps.)
